@@ -21,6 +21,11 @@ drop table le_main;
 drop table point;
 
 select * from member;
+
+update member set me_state='t' where me_id='user1';
+select * from bd_list where me_id='tester' and bd_id in (select me_id from member where me_state='t');
+update member set me_point=499, me_points=499 where me_id='tester';
+
 create table member(
 me_id varchar2(30),
 me_pwd varchar2(30),
@@ -157,7 +162,6 @@ values ('고양가을꽃축제2018','20180922','20181009','경기도고양시일산동구호수로 5
 delete from point;
 select * from point;
 insert into point values(point_seq.nextval,'포인트테스트','포인트테스트','225x160.gif',300,sysdate,1,10);
-
 create table point(
    po_no number, 
    po_title varchar2(100),      

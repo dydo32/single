@@ -20,6 +20,6 @@ public class LogoutServlet extends HttpServlet {
 		if(ses!=null){
 			ses.invalidate();
 		}
+		response.sendRedirect("/single/pages/mainview.jsp");
 	}
-
 }
