@@ -4,6 +4,7 @@ select * from fr_board;
 delete from member;
 select * from tab;
 select * from le_main;
+select * from mate_board;
 
 drop table member;
 drop table bd_list;
@@ -71,8 +72,14 @@ mt_map varchar2(200),
 mt_ctg varchar2(30),
 mt_cnt number,
 me_id varchar2(30),
-mt_img varchar2(200),
-mt_participant varchar2(200));
+mt_img varchar2(200)
+);
+
+create table mate_group(
+	mt_no number
+	me_id_maker varchar2(30)
+	me_id varchar2(30)
+);
 
 create table mate_cmt(	
 mt_cmt_no number,

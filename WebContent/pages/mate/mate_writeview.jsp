@@ -88,8 +88,8 @@
 					</tr>
 				</table>
 				<div id="btndiv">
-					<button type="button" class="btn btn-danger" onclick="history.back()">취소</button>
-					<button type="button" class="btn btn-danger">등록</button>
+					<button type="reset" class="btn btn-danger">취소</button>
+					<button type="submit" class="btn btn-danger">등록</button>
 				</div>	
 			</form>
 
